@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <section id="my-section" class="blogs">
+    
+        <h2>header list</h2>
+        <ul id="list">
+            <!-- li{blog-$}*4 -->
+          <li>blog-1</li>
+          <li>blog-2</li>
+          <li>blog-3</li>
+          <li>blog-4</li>
+        </ul>
+        <article class="blog" >
+            <h3>my-awesome-blog-1</h3>
+            <p id="para-id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum explicabo, libero dignissimos obcaecati itaque assumenda eos cum maiores nam autem iure, repudiandae quam magni ullam nemo facilis asperiores pariatur unde!</p>
+        </article>
+        <article id = "second-blog" class="blog">
+            <h3>my-awesome-blog-2</h3>
+            <p id="para-id2">Quia voluptatum blanditiis dolorum sunt eaque cumque dolores consequatur accusamus. Deserunt, molestiae voluptates odio esse a asperiores totam magni officiis dignissimos eveniet pariatur deleniti laboriosam, possimus officia cumque quidem? Ut.</p>
+        </article >
+        <article class="blog">
+            <h3>my-awesome-blog-3</h3>
+            <p>Ipsum similique ullam impedit obcaecati aut ut voluptas magni nulla sed, at quis harum placeat? Cumque necessitatibus, quod laborum facilis sint adipisci reprehenderit error dolorem, ipsam iusto nostrum qui tempore.</p>
+        </article>
+    </section>
+   </main>
+    
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // console.log(99);
+        // for(var i = 1; i <= 5; i++){
+        //     console.log(i);
+        // }
+        // var i = 1;
+        // while(i <=10){
+        //     if(i % 2 == 0){
+        //         console.log(i);
+        //     }
+        //     i = i + 1;
+        // }
+
+        // var li = document.createElement("li");
+        // li.innerText = "blog-5";
+        // var ul = document.getElementById("list");
+        // ul.appendChild(li);
+
+        var li = document.createElement("li");
+        li.innerText = "blog-5";
+        var ul= document.getElementById("list");
+        ul.appendChild(li);
+
+        var li = document.createElement("li");
+        li.innerText = "blog-6"
+        ul= document.getElementById("list")
+        ul.appendChild(li);
+        
+       
+         var article = document.createElement("article");
+         article.classList.add("blog");
+        //  var h3 = document.createElement("h3");
+        //  h3.innerText = "My Owsome Blog-4";
+        //  var p = document.createElement("P");
+        // p.innerText = "Ipsum similique ullam impedit obcaecati aut ut voluptas magni nulla sed, at quis harum placeat? Cumque necessitatibus, quod laborum facilis sint adipisci reprehenderit error dolorem, ipsam iusto nostrum qui tempore.";
+        //  article.appendChild(h3);
+        //  article.appendChild(p);
+        //  var blogSection= document.getElementById("my-section");
+        //  blogSection.appendChild(article);
+        
+        article.innerHTML = `
+            <h3>my-awesome-blog-4</h3>
+            <p>Ipsum similique ullam impedit obcaecati aut ut voluptas magni nulla sed, at quis harum placeat? Cumque necessitatibus, quod laborum facilis sint adipisci reprehenderit error dolorem, ipsam iusto nostrum qui tempore.</p>
+        `
+        var blogs = document.getElementsByClassName("blog");
+        for(const blog of blogs){
+            blog.style.border = "2px solid red";
+            blog.style.borderRadius = "7px"
+            blog.style.margin = "15px";
+            blog.style.padding = "10px";
+        }
+        h3 = document.getElementsByTagName("h3");
+        for(const h of h3){
+            h.style.color = "orange";
+            h.style.fontSize = "2em"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <section class="my-articles">
+         <!-- article*3>h3{my-awesome-blog-$}+p>lorem -->
+    <article class="my-article">
+        <h3>My Awesome Blog-1</h3>
+        <p id="para-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestias consectetur sint pariatur rem nostrum id! Cupiditate saepe praesentium nesciunt enim esse assumenda error libero. Laborum dolores voluptatem repudiandae omnis?</p>
+    </article>
+    <article class="my-article">
+        <h3 id="second-title">My Awesome Blog-2</h3>
+        <p>Aspernatur quos quas, modi vero sit amet exercitationem rerum, illo vitae ad in cum aliquam. Ullam reprehenderit aut ratione cum nisi, laboriosam blanditiis veritatis qui fugit voluptas alias, expedita tempore?</p>
+    </article>
+    <article class="my-article">
+        <h3 id="third-title">My Awesome Blog-3</h3>
+        <p>A rem necessitatibus voluptas suscipit magni voluptate magnam praesentium explicabo, culpa itaque pariatur error fugiat, impedit cum ducimus nulla perspiciatis consequatur illum iure? Ab porro repudiandae, pariatur praesentium maxime veniam?</p>
+    </article>
+    <script>
+        const text = document.getElementsByTagName("h3");
+        console.log(text);
+        for(var i = 0; i< text.length;i++){
+           var texts = text[i];
+           console.log(texts);
+        }
+       
+        // for(const h3 of text){
+        //     console.log(h3.innerText);
+        // }
+        const blogs = document.getElementsByTagName("p");
+       for(const blog of blogs){
+            console.log(blog.innerText)
+       }
+
+       var secondText = document.getElementById("second-title");
+       secondText.style.color = "pink";
+       secondText.style.fontSize ="2em";
+       secondText.style.marginLeft = "50PX";
+
+       var para = document.getElementById("para-blog");
+       para.style.fontSize = "2rem"
+       para.style.backgroundColor = "red"
+
+       var text2 = document.getElementsByTagName("h3");
+       console.log(text2);
+
+       var articles= document.getElementsByClassName("my-article");
+      for(const article of articles){
+        article.style.border="2px solid red";
+        article.style.margin="20px";
+        article.style.paddingLeft="25px"
+      }
+       console.log(articles);
+       document.querySelector()
+    </script>
+   </section>
+</body>
+</html>
